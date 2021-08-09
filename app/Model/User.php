@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class User extends Model
 {
-    protected $table = 'tsegusuario';
+    protected $table = 'usuario';
     protected $primaryKey = 'usu_codigo';
     const CREATED_AT = 'usu_fecharegistra';
     const UPDATED_AT = 'usu_fechaactualiza';

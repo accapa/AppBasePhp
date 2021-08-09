@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Feriado extends Model
 {
-    protected $table = 'tferiados';
+    protected $table = 'feriados';
     protected $primaryKey = 'fer_codigo';
     const CREATED_AT = 'fer_fechareg';
     const UPDATED_AT = null;
