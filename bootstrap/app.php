@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/../vendor/autoload.php'; //todo: habilitar esto cuando se pase a config el global.php
+require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new App\Application(
 );

@@ -25,9 +25,9 @@ class MyController
 
     public function select()
     {
-        $users = DB::table('usuario')
-            ->select(DB::raw('count(*) as user_count, usu_apellido'))
-            ->groupBy('usu_apellido')
+        $users = DB::table('producto')
+            ->select(DB::raw('count(*) as user_count, id_producto_categoria'))
+            ->groupBy('id_producto_categoria')
             ->first();
         echo json_encode($users);
     }
@@ -35,6 +35,13 @@ class MyController
     public function sinsql()
     {
         echo "hola sin sql";
+    }
+
+    public function pageable()
+    {
+        $page = $_REQUEST["page"] ?? 1;
+        $users = DB::table('producto')->paginate($perPage = 2, $columns = ['*'], $pageName = 'page', $page)->toJson();
+        echo $users;
     }
 
     public function pdo()

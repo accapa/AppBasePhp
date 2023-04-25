@@ -12,11 +12,11 @@ class Eloquent
     public static function connection(Container $app)
     {
         $config = [
-            'driver' => 'sqlsrv',
-            'host' => 'myhost',
-            'database' => 'bd',
-            'username' => 'user',
-            'password' => '***',
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'database' => 'nirespa',
+            'username' => 'root',
+            'password' => '',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
