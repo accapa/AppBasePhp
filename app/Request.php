@@ -20,8 +20,8 @@ class Request
             $url = explode('/', $url);
             $url = array_filter($url);  // elimina los elementos vacios
 
-            $this->_controlador = strtolower(array_shift($url));
-            $this->_metodo = strtolower(array_shift($url));
+            $this->_controlador = array_shift($url);
+            $this->_metodo = array_shift($url);
             $this->_argumentos = $url;
         }
         

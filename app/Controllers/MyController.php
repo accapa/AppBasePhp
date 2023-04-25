@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Model\User;
+use App\Helpers\Log4php;
 use Illuminate\Support\Facades\DB;
 use PDO;
 
@@ -34,7 +35,11 @@ class MyController
 
     public function sinsql()
     {
-        echo "hola sin sql";
+        $logger = Log4php::log();
+        $logger->debug("hola logs");
+        echo helpersFunction();
+        echo "</hr>";
+        echo UPLOAD_TMP_DIR;
     }
 
     public function pageable()

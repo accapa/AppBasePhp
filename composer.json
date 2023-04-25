@@ -1,11 +1,16 @@
 {
     "require": {
         "illuminate/database": "*",
-        "illuminate/pagination": "^8.53"
+        "illuminate/pagination": "^8.53",
+        "apache/log4php": "^2.3"
     },
     "autoload": {
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/Helpers/Helpers.php",
+            "app/Config/Config.php"
+        ]
     }
 }
